@@ -1,7 +1,9 @@
 import {SignUpController} from "../../signUp";
-import {EmailValidator} from "../../../protocols/email-validator";
+import {EmailValidator} from "../../../protocols";
+import {AddAccount} from "../../../../domain/usecases/add-account";
 
-export interface SutType {
+export interface SutTypes {
     sut: SignUpController
-    emailValidatorStub: EmailValidator
+    emailValidatorStub: EmailValidator,
+    addAccountStub: AddAccount
 }
