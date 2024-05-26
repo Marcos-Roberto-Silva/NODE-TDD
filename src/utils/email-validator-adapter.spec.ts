@@ -14,7 +14,6 @@ describe('EmailValidator Adapter', () => {
         jest.spyOn(validator, 'isEmail').mockImplementationOnce(() => {
             return false;
         });
-
         const isValid = sut.isValid('invalid_email@mil.com');
         expect(isValid).toBe(false);
     });
