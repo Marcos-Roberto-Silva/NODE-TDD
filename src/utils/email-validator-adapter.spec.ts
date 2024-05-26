@@ -1,4 +1,4 @@
-import {EmailValidatorAdapter} from "./email-vaidator";
+import {EmailValidatorAdapter} from "./email-validator-adapter";
 import validator from "validator";
 import {isBooleanObject} from "node:util/types";
 
