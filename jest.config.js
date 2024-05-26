@@ -1,20 +1,9 @@
-/**
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
-import type {Config} from 'jest';
-
-const config: Config = {
+module.exports = {
   roots: ['<rootDir>/src'],
-  collectCoverageFrom: ['<rootDir>src/**/*.ts'],
+  collectCoverageFrom: [ '<rootDir>/src/**/*.ts', '!<rootDir>/src/main/**', '!<rootDir>/src/**/*-protocols.ts', '!**/protocols/**', '!**/test/**' ],
   coverageDirectory: "coverage",
-  clearMocks: true,
-  collectCoverage: true,
-  coverageProvider: "v8",
-  "transform": {
+  testEnvironment: "node",
+  transform: {
     '.+\\.ts$':'ts-jest'
   }
 };
-
-export default config;

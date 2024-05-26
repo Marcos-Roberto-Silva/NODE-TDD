@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand ",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:integration": "npm test -- --watch -c jest-integration-config.js",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage"
   },
   "keywords": [],
   "author": "",
@@ -18,12 +23,14 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@types/validator": "^13.11.10",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "eslint": "^8.57.0",
     "eslint-config-love": "^47.0.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "validator": "^13.12.0"
   }
 }
