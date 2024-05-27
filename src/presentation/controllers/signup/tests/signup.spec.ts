@@ -1,10 +1,7 @@
 import {SignUpController} from '../signUp';
 import {EmailValidatorStub} from "./helpers/email-validator-stub";
 import {SutTypes} from "./interfaces/sut-types";
-import {ServerError, InvalidParamError, MissingParamError} from "../../errors";
-import {EmailValidator} from "../../protocols";
-import {AccountModel} from '../../../domain/models/account';
-import {AddAccount, AddAccountModel} from '../../../domain/usecases/add-account';
+import {ServerError, InvalidParamError, MissingParamError} from "../../../errors";
 import {AddAccountStub} from "./helpers/add-account-stub";
 
 const makeSut = (): SutTypes => {

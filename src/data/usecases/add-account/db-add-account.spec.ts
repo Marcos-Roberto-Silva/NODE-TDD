@@ -1,4 +1,5 @@
 import {EncrypterStub} from "./helpers/encrypter-stub";
+import {DbAddAccount} from "./db-add-account";
 
 describe('DbAddAccount Usecase', () => {
     it('should call Encrypter wit correct password', () => {

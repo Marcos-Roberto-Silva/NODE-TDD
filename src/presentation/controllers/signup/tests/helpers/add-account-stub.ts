@@ -1,5 +1,4 @@
-import {AddAccount, AddAccountModel} from "../../../../domain/usecases/add-account";
-import {AccountModel} from "../../../../domain/models/account";
+import {AddAccount, AddAccountModel, AccountModel} from "../../signup-protocols";
 
 export class AddAccountStub implements AddAccount {
     add(account: AddAccountModel): AccountModel {
