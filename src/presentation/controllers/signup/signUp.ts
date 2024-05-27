@@ -1,8 +1,6 @@
-import {badRequest, serverError} from "../helpers/http-helper";
-import {EmailValidator, Controller, HttpRequest, HttpResponse} from "../protocols";
-import {InvalidParamError, MissingParamError} from "../errors";
-import {AddAccount} from "../../domain/usecases/add-account";
-import {name} from "ts-jest/dist/transformers/hoist-jest";
+import {badRequest, serverError} from "../../helpers/http-helper";
+import {EmailValidator, Controller, HttpRequest, HttpResponse, AddAccount} from "./signup-protocols";
+import {InvalidParamError, MissingParamError} from "../../errors";
 
 export class SignUpController implements Controller {
     private readonly emailValidator: EmailValidator;
