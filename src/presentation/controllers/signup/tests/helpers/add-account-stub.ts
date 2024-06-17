@@ -1,4 +1,4 @@
-import {AddAccount, AddAccountModel, AccountModel} from "../../signup-protocols";
+import {AccountModel, AddAccount, AddAccountModel} from "../../signup-protocols";
 
 export class AddAccountStub implements AddAccount {
     add(account: AddAccountModel): AccountModel {

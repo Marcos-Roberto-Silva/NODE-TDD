@@ -15,6 +15,8 @@ const makeSut = (): SutTypes => {
         addAccountStub
     }
 }
+
+
 describe('SignUp Controller', () => {
     it('should return 400 if no name is provided', () => {
         const {sut} = makeSut();
@@ -203,5 +205,24 @@ describe('SignUp Controller', () => {
             name: 'valid_name',
             email: 'valid_email@email.com',
             password: 'valid_password'});
+    });
+
+    it('should call AddAccount with correct values', () => {
+        const {sut, addAccountStub } = makeSut();
+        const addSpy = jest.spyOn(addAccountStub, 'add');
+        const httpRequest = {
+            body: {
+                name: 'any_name',
+                email: 'any_name@email.com',
+                password: 'any_password',
+                passwordConfirmation: 'any_password',
+            }
+        }
+        sut.handle(httpRequest);
+        expect(addSpy).toHaveBeenCalledWith({
+            name: 'any_name',
+            email: 'any_name@email.com',
+            password: 'any_password',
+        });
     });
 });
