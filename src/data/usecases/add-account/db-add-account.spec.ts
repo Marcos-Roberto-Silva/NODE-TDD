@@ -7,6 +7,7 @@ describe('DbAddAccount Usecase', () => {
         const sut = new DbAddAccount();
         const encryptSpy = jest.spyOn(encrypterStub, 'encrypt');
         const accountData = {
+            id: '234',
             name: 'John Doe',
             email: 'john@doe.com',
             password: 'valid_password',
