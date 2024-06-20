@@ -1,17 +1,20 @@
 import {EncrypterStub} from "./helpers/encrypter-stub";
 import {DbAddAccount} from "./db-add-account";
+import {AddRepositoryStub} from "./helpers/add-repository-stub";
 
 interface SutTypes {
     sut: DbAddAccount;
-    encrypterStub: EncrypterStub;
+    encrypterStub: EncrypterStub
+    addAccountRepositoryStub: AddRepositoryStub
 }
 
 const makeSut = (): SutTypes => {
     const encrypterStub = new EncrypterStub();
-    const sut =  new DbAddAccount(encrypterStub);
+    const addAccountRepositoryStub = new AddRepositoryStub();
+    const sut =  new DbAddAccount(encrypterStub, addAccountRepositoryStub);
 
     return {
-        sut, encrypterStub
+        sut, encrypterStub, addAccountRepositoryStub
     }
 }
 
@@ -40,5 +43,21 @@ describe('DbAddAccount Usecase', () => {
         }
         const promise = sut.add(accountData);
         await expect(promise).rejects.toThrow();
+    });
+
+    it('should call AddAccountRepository with correct values', async () => {
+        const {sut, addAccountRepositoryStub} = makeSut();
+        const addSpy = jest.spyOn(addAccountRepositoryStub, 'add')
+        const accountData = {
+            name: 'John Doe',
+            email: 'john@doe.com',
+            password: 'valid_password',
+        }
+        await sut.add(accountData);
+        expect(addSpy).toHaveBeenCalledWith({
+            name: 'John Doe',
+            email: 'john@doe.com',
+            password: 'hashed_password',
+        });
     });
 })
