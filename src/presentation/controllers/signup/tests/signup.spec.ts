@@ -1,8 +1,8 @@
 import {SignUpController} from '../signUp';
-import {EmailValidatorStub} from "./helpers/email-validator-stub";
+import {EmailValidatorStub} from "./interfaces/helpers/email-validator-stub";
 import {SutTypes} from "./interfaces/sut-types";
 import {ServerError, InvalidParamError, MissingParamError} from "../../../errors";
-import {AddAccountStub} from "./helpers/add-account-stub";
+import {AddAccountStub} from "./interfaces/helpers/add-account-stub";
 
 const makeSut = (): SutTypes => {
     const emailValidatorStub = new EmailValidatorStub();
