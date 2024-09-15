@@ -4,7 +4,7 @@ import {AccountMongoRepository} from "./account";
 describe('Account Mongo Repository', () => {
 
     beforeAll(async () => {
-        await MongoHelper.connect('mongodb://localhost:27017/myDB');
+        await MongoHelper.connect(process.env.MONGODB_URL = 'mongodb://localhost:27017/myDB');
     });
 
     afterAll(async () => {
