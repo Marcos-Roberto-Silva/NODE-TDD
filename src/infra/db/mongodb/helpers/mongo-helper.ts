@@ -15,5 +15,5 @@ export const MongoHelper = {
 
     getCollection (name: string) {
         return this.db.collection(name);
-    }
+    },
 }
