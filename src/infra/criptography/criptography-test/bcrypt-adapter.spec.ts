@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import {BcryptAdapter} from './bcrypt-adapter';
+import {BcryptAdapter} from '../bcrypt-adapter';
 import {rejects} from "node:assert";
 
 const salt = 12;

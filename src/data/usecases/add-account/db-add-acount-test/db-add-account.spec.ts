@@ -1,6 +1,6 @@
-import {EncrypterStub} from "./helpers/encrypter-stub";
-import {DbAddAccount} from "./db-add-account";
-import {AddRepositoryStub} from "./helpers/add-repository-stub";
+import {EncrypterStub} from "../helpers/encrypter-stub";
+import {DbAddAccount} from "../db-add-account";
+import {AddRepositoryStub} from "../helpers/add-repository-stub";
 
 interface SutTypes {
     sut: DbAddAccount;
