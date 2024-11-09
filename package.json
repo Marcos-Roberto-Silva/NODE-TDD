@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sucrase-nodea src/main/server.ts",
+    "start": "sucrase-node src/main/server.ts",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand ",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
@@ -40,6 +40,7 @@
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
     "express": "^4.21.0",
+    "fast-glob": "^3.3.2",
     "mongodb": "^6.9.0",
     "ts-node": "^10.9.2",
     "validator": "^13.12.0"
