@@ -15,7 +15,7 @@ describe('Account Mongo Repository', () => {
         const accountCollection = MongoHelper.getCollection('accounts');
         await accountCollection.deleteMany({});
         }
-    )
+    );
 
     test('Should return an account on success', async () => {
         const sut = new AccountMongoRepository();
