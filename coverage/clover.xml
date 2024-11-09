@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1721576331984" clover="3.2.0">
-  <project timestamp="1721576331984" name="All files">
-    <metrics statements="58" coveredstatements="58" conditionals="3" coveredconditionals="3" methods="20" coveredmethods="20" elements="81" coveredelements="81" complexity="0" loc="58" ncloc="58" packages="8" files="13" classes="13"/>
+<coverage generated="1730571789384" clover="3.2.0">
+  <project timestamp="1730571789384" name="All files">
+    <metrics statements="68" coveredstatements="68" conditionals="3" coveredconditionals="3" methods="24" coveredmethods="24" elements="95" coveredelements="95" complexity="0" loc="68" ncloc="68" packages="10" files="15" classes="15"/>
     <package name="data.usecases.add-account">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="db-add-account.ts" path="/Users/marcossilva/Documents/Udemy/Node/NODE-TDD/src/data/usecases/add-account/db-add-account.ts">
@@ -37,10 +37,33 @@
         <line num="8" count="3" type="stmt"/>
       </file>
     </package>
+    <package name="infra.db.mongodb.account-repository">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="account.ts" path="/Users/marcossilva/Documents/Udemy/Node/NODE-TDD/src/infra/db/mongodb/account-repository/account.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.db.mongodb.helpers">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="mongo-helper.ts" path="/Users/marcossilva/Documents/Udemy/Node/NODE-TDD/src/infra/db/mongodb/helpers/mongo-helper.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+      </file>
+    </package>
     <package name="presentation.controllers.signup">
-      <metrics statements="20" coveredstatements="20" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <metrics statements="19" coveredstatements="19" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="signUp.ts" path="/Users/marcossilva/Documents/Udemy/Node/NODE-TDD/src/presentation/controllers/signup/signUp.ts">
-        <metrics statements="20" coveredstatements="20" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="19" coveredstatements="19" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -60,7 +83,6 @@
         <line num="36" count="5" type="stmt"/>
         <line num="42" count="4" type="stmt"/>
         <line num="44" count="2" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
       </file>
     </package>
     <package name="presentation.controllers.signup.tests.interfaces.helpers">
