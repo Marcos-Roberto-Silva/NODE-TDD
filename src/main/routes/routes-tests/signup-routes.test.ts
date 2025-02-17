@@ -12,7 +12,7 @@ describe('SignUp Routes', () => {
     });
 
     beforeEach(async () => {
-            const accountCollection = MongoHelper.getCollection('accounts');
+            const accountCollection = await MongoHelper.getCollection('accounts');
             await accountCollection.deleteMany({});
         }
     );
@@ -27,13 +27,5 @@ describe('SignUp Routes', () => {
                 passwordConfirmation:'123'
             })
             .expect(200);
-    });
-
-    it('should ', () => {
-        const a = 1;
-        const b = 2;
-        const result = a * b;
-
-        expect(result).toBe(2);
     });
 });
